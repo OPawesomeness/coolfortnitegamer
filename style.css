@@ -1,86 +1,94 @@
 .wrap2 {
-    font-family: Comic Sans MS;
-    font-size: 300%;
-    color: #2f925b;
+  font-family: Comic Sans MS;
+  font-size: 300%;
+  color: #2f925b;
 }
 
-body {
-    animation: no 0.15s normal infinite;
+:root {
+  filter: contrast(90);
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.6;
+  margin: 0;
+  padding: 0;
 }
 
 body > marquee {
-	position: absolute;
+  position: absolute;
 }
 body > marquee > marquee > img {
-    animation: hammertime 1.50s normal infinite;
+  animation: hammertime 1.5s normal infinite;
 }
 
 .regrets {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    pointer-events: none;
-    opacity: 0.2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  pointer-events: none;
+  opacity: 0.2;
 }
 .regrets iframe {
-    width: 100%;
-    height: 100%;
-    animation: iframeani 30s ease-out infinite;
-    transform: scale(2);
+  width: 100%;
+  height: 100%;
+  animation: iframeani 30s ease-out infinite;
+  transform: scale(2);
 }
 
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
-
 
 @keyframes no {
-    from {
-        background-image: linear-gradient(to right, #ff00e3 0%, #001fff 100%);
-        filter: blur(1px);
-    }
-    to {
-        background-image: linear-gradient(to right, #90a0a0 0%, #e1fe40 100%);
-        transform: rotate(4deg);
-    }
+  from {
+    background-image: linear-gradient(to right, #ff00e3 0%, #001fff 100%);
+    filter: blur(1px);
+  }
+  to {
+    background-image: linear-gradient(to right, #90a0a0 0%, #e1fe40 100%);
+    transform: rotate(4deg);
+  }
 }
 @keyframes hammertime {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes iframeani {
-    from {
-        background-color: #ff00e3;
-        transform: scale(2) rotate(0deg);
-    }
-    to {
-        background-color: #a4a52f;
-        transform: scale(2) rotate(360deg);
-    }
+  from {
+    background-color: #ff00e3;
+    transform: scale(2) rotate(0deg);
+  }
+  to {
+    background-color: #a4a52f;
+    transform: scale(2) rotate(360deg);
+  }
 }
 
 .wrap1 {
-    animation: htmlani 1s ease infinite;
-    animation-direction: alternate-reverse;
-    overflow: hidden;
+  animation: htmlani 1s ease infinite;
+  animation-direction: alternate-reverse;
+  overflow: hidden;
 }
 
 @keyframes htmlani {
-    0% {
+  0% {
     transform: translateX(0) translateY(0) rotateX(360deg) rotateY(360deg);
     filter: hue-rotate(0deg);
-}
-    30% {
+  }
+  30% {
     transform: translateX(20%) translateY(30%) rotateX(0deg) rotateY(0deg);
     filter: hue-rotate(360deg) invert(1);
-}
+  }
 }
